@@ -1,26 +1,23 @@
-<svg onload="init(evt)" xmlns="http://www.w3.org/2000/svg"
+<svg onload="init()" xmlns="http://www.w3.org/2000/svg"
 aria-label="Calendar" role="img"
 viewBox="0 0 512 512">
 <script type="text/ecmascript"><![CDATA[
-function init(evt) {
+function init() {
   var time = new Date();
   var locale = "en-gb";
+
   var DD   = time.getDate();
-  var DDD  = time.toLocaleString(locale, { weekday: "short" });
-  var DDDD = time.toLocaleString(locale, { weekday: "long" });
-  var MM   = time.getMonth() + 1;
-  var MMM  = time.toLocaleString(locale, {month: "short"});
-  var MMMM = time.toLocaleString(locale, {month: "long"});
-  var YYYY = time.getFullYear();
+  var DDD  = time.toLocaleString(locale, {weekday: "long" });
+  var MMM  = time.toLocaleString(locale, {month:   "short"}).toUpperCase();
+
+  document.getElementById("day").textContent= DD;
+  document.getElementById("weekday").textContent= DDD;
+  document.getElementById("month").textContent= MMM;
   
-  var svgDocument = evt.target.ownerDocument;
-  var dayNode = svgDocument.createTextNode(DD);
-  svgDocument.getElementById("day").appendChild(dayNode);
-  var weekdayNode = svgDocument.createTextNode(DDDD);
-  svgDocument.getElementById("weekday").appendChild(weekdayNode);
-  var monthNode = svgDocument.createTextNode(MMM.toUpperCase());
-  svgDocument.getElementById("month").appendChild(monthNode);
-  
+  // var DDDD = time.toLocaleString(locale, { weekday: "long" });
+  // var MM   = time.getMonth() + 1;
+  // var MMMM = time.toLocaleString(locale, {month: "long"});
+  // var YYYY = time.getFullYear();
 }
 ]]></script>
 
@@ -42,19 +39,21 @@ function init(evt) {
   fill="#fff" 
   font-family="monospace"
   font-size="140px"
-  style="text-anchor: left"></text>
+  style="text-anchor: left">FEB</text>
+
 <text id="day"
   x="256" 
   y="400" 
   fill="#66757f" 
   font-family="monospace"
   font-size="256px"
-  style="text-anchor: middle"></text>
+  style="text-anchor: middle">29</text>
+
 <text id="weekday"
   x="256" 
   y="480" 
   fill="#66757f" 
   font-family="monospace"
   font-size="64px"
-  style="text-anchor: middle"></text>
+  style="text-anchor: middle">Sunday</text>
 </svg>
