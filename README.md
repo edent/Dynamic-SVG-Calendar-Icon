@@ -6,8 +6,20 @@ For [my contact page](https://edent.tel/), I wanted a generic calendar icon to l
 
 Here it is, <a href="https://shkspr.mobi/svg/calendar.svg">an SVG calendar which always display's today's date</a>.
 
+(Note - GitHub doesn't allow data URIs or iFrames - so you'll need to [click the link to see it](https://shkspr.mobi/svg/calendar.svg))
+
 The background image is derived from the [Twitter TweMoji Calendar icon](https://github.com/twitter/twemoji/blob/gh-pages/2/svg/1f4c5.svg) - CC-BY.
-  
+
+## Use
+SVG supports JavaScript. Browsers will only run the JavaScript if the SVG is included...
+
+* in an iframe `<iframe src="calendar.svg"></iframe>`
+* as inline `<body><svg>.....</svg></body>`
+
+It will not run JavaScript in an `<img>` element.
+
+## HOWTO
+
 Text support in SVG is a little awkward, so let me explain how I did this.
 
 SVG supports JavaScript. This will run as soon as the image is loaded.
