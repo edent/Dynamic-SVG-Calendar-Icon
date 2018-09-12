@@ -10,6 +10,8 @@ Here it is, <a href="https://shkspr.mobi/svg/calendar.svg">an SVG calendar which
 
 The background image is derived from the [Twitter TweMoji Calendar icon](https://github.com/twitter/twemoji/blob/gh-pages/2/svg/1f4c5.svg) - CC-BY.
 
+[![Buy me a coffee](https://www.ko-fi.com/img/donate_sm.png)](https://ko-fi.com/edent)
+
 ## Use
 SVG supports JavaScript. Browsers will only run the JavaScript if the SVG is included...
 
